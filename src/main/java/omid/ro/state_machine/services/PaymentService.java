@@ -9,13 +9,13 @@ import java.util.Optional;
 
 public interface PaymentService {
 
-PaymentEntity saveNewPayment(PaymentEntity paymentEntity);
-StateMachine<PaymentState, PaymentEvent> preAuth(Long paymentId);
-StateMachine<PaymentState, PaymentEvent> authorizePayment(Long paymentId);
-StateMachine<PaymentState, PaymentEvent> declineAuth(Long paymentId);
-Optional<PaymentEntity> getPaymentById(Long paymentId);
+    PaymentEntity saveNewPayment(PaymentEntity paymentEntity);
 
+    StateMachine<PaymentState, PaymentEvent> preAuth(Long paymentId);
 
+    StateMachine<PaymentState, PaymentEvent> authorizePayment(Long paymentId);
 
+    StateMachine<PaymentState, PaymentEvent> declineAuth(Long paymentId);
 
+    Optional<PaymentEntity> getPaymentById(Long paymentId);
 }
